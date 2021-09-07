@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netflix</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+
+        <button class="navbar-toggler" type="button">
+            <img src="assets/images/hamburger.gif" alt="Menu">
+        </button>
+
+        <a class="navbar-brand flex-grow-1" href="#">
+            <img src="assets/images/logo.png" class="my-1 mx-2" alt="Netflix">
+        </a>
+
+        <form action="form-inline">
+            <input type="search" class="form-control" placeholder="Busca">
+        </form>
+
+        <ul class="list-unstyled font-weight-bold">
+            <li class="media media-avatar">
+                <img src="assets/images/avatar.jpg" alt="avatar" class="mr-2">
+                <div class="media-body"> 
+                    <p class="h6 m-0">RAÍSSA AZEVEDO</p>
+                    <small>Trocar de perfil</small>
+                </div>
+            </li>
+            <li class="divider"></li>
+            <li><a href="" class="text-reset">Inicio</a></li>
+            <li><a href="" class="text-reset">Minha Lista</a></li>
+            <li><a href="" class="text-reset">Séries de ação e aventura</a></li>
+            <li><a href="" class="text-reset">Ação e aventura</a></li>
+            <li><a href="" class="text-reset">Séries teen</a></li>
+            <li><a href="" class="text-reset">Filmes Coreanos</a></li>
+            <li><a href="" class="text-reset">Séries LGBTQIA+</a></li>
+            <li><a href="" class="text-reset">Animes</a></li>
+            
+        </ul>
+    </nav>
+   
+    <script>
+        const btn = document.querySelector('.navbar-toggler');
+        const navbar = document.querySelector('.navbar');
+        btn.addEventListener('click', e => {
+            navbar.classList.toggle('sidebar-open');
+        });
+    </script>
+</body>
+</html>
