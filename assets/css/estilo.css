@@ -1,10 +1,14 @@
-body, .bg-dark {
+body {
     background-color: #1b1b1b!important;
+    padding-top: 60px;
 }
 
 .navbar {
-    position: relative;
     z-index: 1000;
+}
+
+.navbar.bg-dark {
+    background-color: rgba(0,0,0,0.6)!important;
 }
 
 .navbar .form-control {
@@ -17,10 +21,10 @@ body, .bg-dark {
     height: 28px;
 }
 
-.navbar ul {
+.navbar ul.siderbar {
     color: #999898;
     max-width: 250px;
-    background-color: #1b1b1b;
+    background-color: #1b1b1b!important;
     position: absolute;
     top: 60px;
     left: -250px;
@@ -35,7 +39,12 @@ body, .bg-dark {
 }
 
 .navbar ul li {
-    padding: 0.3em 1em;
+    padding: .3em 1em;
+}
+
+.navbar ul li.divider{
+    border-bottom: #999898 1px solid;
+    margin: .3em auto;
 }
 
 .navbar img{
@@ -59,12 +68,16 @@ body, .bg-dark {
     z-index: 999;
 }
 
+.media-avatar img {
+    height: 38px;
+}
+
 .full-banner {
     background-image: url('../images/full-banner.jpg');
+    min-height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    min-height: 120px;
 }
 
 .full-banner small {
@@ -78,7 +91,7 @@ body, .bg-dark {
     min-width: 100px;
 }
 
-.list-titles h2 {
+.list-titles h2, footer {
     color: #999898;
 }
 
