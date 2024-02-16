@@ -7,15 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Netflix</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/estilo.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+   
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
 
-        <button type="button" class="navbar-toggler d-lg-none">
+        <button type="button" class="navbar-toggler d-lg-none" role="button">
             <img src="assets/images/hamburger.gif" alt="Menu">
         </button>
 
@@ -42,25 +44,6 @@
                 <p class="h6 m-0">RAISSA AZEVEDO</p>
             </div>
         </div>
-
-        <ul class="list-unstyled font-weight-bold ">
-            <li class="media media-avatar">
-                <img src="assets/images/eu.jpg" alt="Avatar" class="mr-2">
-                <div class="media-body">
-                    <p class="h6 m-0">RAISSA AZEVEDO</p>
-                    <small>Trocar de perfil</small>
-                </div>
-            </li>
-            <li class="divider"></li>
-            <li><a href="#" class="text-reset">Inicio</a></li>
-            <li><a href="#" class="text-reset">Minha lista</a></li>
-            <li><a href="#" class="text-reset">Séries drama</a></li>
-            <li><a href="#" class="text-reset">Séries coreanas</a></li>
-            <li><a href="#" class="text-reset">Documentários</a></li>
-            <li><a href="#" class="text-reset">Animes</a></li>
-            <li><a href="#" class="text-reset">Filmes infantis</a></li>
-            <li><a href="#" class="text-reset">Séries América Latina</a></li>
-        </ul>
 
     </nav>
 
@@ -156,31 +139,31 @@
         <a href="#" class="col-12 col-md-3 text-reset">Centro de ajuda</a>
     </footer>
 
+    <div class="backdrop"></div>
+
     <script>
         const btn = document.querySelector('.navbar-toggler');
         const navbar = document.querySelector('.navbar');
+        const backdrop = document.querySelector('.backdrop');
         btn.addEventListener('click', e => {
             navbar.classList.toggle('sidebar-open');
+            backdrop.classList.toggle('show');
+        });
 
-            if (navbar.classList.contains('sidebar-open')) {
-                const backdrop = document.createElement('div');
-                navbar.classList.remove('backdrop');
-
-                backdrop.classList.add('backdrop');
-                document.querySelector('body').append(backdrop);
-
-                backdrop.addEventListener('click', e => {
-                    navbar.classList.remove('sidebar-open');
-                });
-
-            } else {
-                document.querySelector('.backdrop').remove();
-            }
+        backdrop.addEventListener('click', e => {
+            navbar.classList.remove('sidebar-open');
+            backdrop.classList.remove('show');
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

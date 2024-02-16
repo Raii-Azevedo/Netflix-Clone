@@ -1,28 +1,19 @@
 body {
     background-color: #1b1b1b!important;
-    padding-top: 60px;
 }
 
 .navbar {
-    z-index: 1000;
     position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar.bg-dark {
     background-color: rgba(0,0,0,0.6)!important;
 }
 
-.navbar .form-control {
-    background-color: #1b1b1b!important;
-    color: #fff;
-    border-color: #fff;
-    border-radius: 0;
-    max-width: 115px;
-    line-height: 28px;
-    height: 28px;
-}
-
-.navbar ul.siderbar {
+.navbar ul.sidebar {
     color: #999898;
     max-width: 250px;
     background-color: #1b1b1b!important;
@@ -34,40 +25,22 @@ body {
     transition: all 0.1s ease-out;
     opacity: .5;
 }
-.navbar.sidebar-open ul{
+.navbar.sidebar-open ul {
     left: 0;
     opacity: 1;
 }
 
-.navbar ul li {
-    padding: .3em 1em;
-}
-
-.navbar ul li.divider{
-    border-bottom: #999898 1px solid;
-    margin: .3em auto;
-}
-
-.navbar img{
-    height: 24px;
-}
-
-.navbar-dark .navbar-toggler{
-    color: #fff;
-    border: none;
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .backdrop {
-    background-color: rgba(0,0,0,0.4);
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
+    display: none;
 }
+
 
 .media-avatar img {
     height: 38px;
